@@ -16,6 +16,16 @@ div[class$="__inner"] {
   background-color: rgba(240, 248, 255, 0.7);
 }
 
+@media screen and (min-width: 768px) {
+
+div[class$="__inner"] {
+  max-width: 1130px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: rgba(240, 248, 255, 0.7);
+}
+}
+
 [class$="__txt"] {
   line-height: 2;
   margin-bottom: 40px;
@@ -61,12 +71,13 @@ strong {
 .more a {
   margin: 0 auto;
   margin-bottom: 50px;
-  width: 300px;
+  width: 50%;
+  font-size: 0.8rem;
   text-align: center;
   padding-top: calc(30px - 16px);
   padding-bottom: calc(30px - 16px);
   display: block;
-  background-color: #005200;
+  background-color: rgb(14, 74, 53);
   border-radius: 4px;
   color: #fff;
 }
@@ -148,12 +159,25 @@ strong {
 /*btm*/
 
 .btm__fix {
+  width: 100%;
   position: fixed;
   display: flex;
   justify-content: space-between;
   bottom: 0;
   right: 0;
   z-index: 999;
+}
+.btm__fix > img{
+  width: 50%;
+}
+
+@media screen and (min-width: 768px) {
+.btm__fix {
+  max-width: 50%;
+  }
+.btm__fix > img{
+  width: 100%;
+}
 }
 
 /*header
@@ -242,7 +266,21 @@ position: relative;
   text-align: center;
   color: #fff;
 }
+#fv .more a{
+  background-color:rgb(22, 132, 31);
+}
 
+@media screen and (min-width: 768px) {
+  .fv__box{
+    top: 0;
+    left: 0;
+    bottom: 0px;
+    right: 0;
+/*    margin: 0 auto;*/
+  text-align: center;
+  color: #fff;
+}
+}
 
 /*main
 -----------------------------------*/
@@ -254,16 +292,35 @@ main {
 #news{
   background-color:#241004;
 }
-#news .news__inner{
-  padding: 20px;
-}
-.info{
-  margin-bottom: 30px;
-}
 #news a{
   display: block;
   color: #fff;
 }
+
+  #news .news__inner{
+    display: flex;
+  padding: 20px;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+.info a{
+  display: block;
+  margin-bottom: 30px;
+  }
+@media screen and (min-width: 768px) {
+  .info a{
+margin-bottom: 0;
+  }
+  .info a >div{
+    float: left;
+    padding-right: 1rem;
+  }
+  .news__inner{
+    display: flex;
+  }
+}
+
 /*message
 -----------------------------------*/
 #message{
@@ -379,7 +436,9 @@ margin-bottom: 20px;
 padding: 20px 20px 70px;
 }
 
-.reco__conts{
+.reco__conts h3{
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .reco__cont{
@@ -387,7 +446,12 @@ padding: 20px 20px 70px;
 }
 
 .reco__cont img{
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
   margin-bottom: 20px;
+  border-radius: 50%;
 }
 
 @media screen and (min-width: 768px) {
@@ -407,13 +471,18 @@ padding: 20px 20px 70px;
 
 /*support
 -----------------------------------*/
-
+#support{
+  background: url(../img/top_004-1.jpg) no-repeat center/cover;
+}
 .support__inner {
   padding: 40px 0 20px;
   color: #fff;
 }
 
 #support img {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
   margin-bottom: 20px;
 }
 
@@ -429,21 +498,20 @@ padding: 20px 20px 70px;
 .top {
   text-align: center;
   width: 100%;
-  height: 50px;
-  background-color: #222;
-  margin-bottom: 20px;
+  padding-top: 16px;
+  background-color: #333;
 }
 
-.top span::after {
-  content: ">";
-  transform: rotate(90deg);
+.top span{
+font-size: 1.5rem;
   color: #fff;
 }
 
 /*blog
 -----------------------------------*/
-#blog {
-  margin-bottom: 40px;
+#blog .blog__inner{
+  padding: 40px 20px;
+/*  margin-bottom: 40px;*/
 }
 
 #blog h2 {
@@ -457,7 +525,7 @@ padding: 20px 20px 70px;
 }
 
 .blog__cont {
-  width: calc((100% / 2) - 10px);
+  width: calc((100% / 2) - 5px);
   margin-bottom: 30px;
 }
 
@@ -473,37 +541,41 @@ padding: 20px 20px 70px;
 /*footer
 -----------------------------------*/
 footer {
-  padding-top: 30px;
   text-align: center;
-  background-color: #51bdec;
-}
-
-.footer__inner {
-  border-top: 2px solid #444;
+/*  background-color: #51bdec;*/
+  border-top: 1px solid #444;
+  margin: 0 20px;
 }
 
 footer img {
-  margin-bottom: 40px;
+  width: 45%;
+  margin: 40px 0;
 }
 
 .f-nav {
-  margin-bottom: 30px;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .f-nav li a {
-  margin-bottom: 10px;
+  font-size: 7px;
+  margin-bottom: 40px;
   display: block;
-  padding: 0 20px;
+  padding: 0 10px;
   color: #222;
   border-right: 1px solid #444;
 }
 
+.f-nav li:last-of-type a{
+  border: none;
+}
+
 .copy {
-  height: 40px;
-  line-height: 40px;
+  display: block;
   text-align: center;
+  line-height: 40px;
+  font-size: 0.8rem;
   background-color: #1D4A35;
   color: #fff;
+  padding-bottom: 50px;
 }
