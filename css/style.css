@@ -82,6 +82,7 @@ strong {
   padding-bottom: calc(40px - 16px);
   display: block;
   background-color: #005200;
+  border-radius: 4px;
   color: #fff;
 }
 
@@ -103,7 +104,8 @@ strong {
 
 /*border*/
 .border{
-  width: 80%;
+  display: block;
+/*  width: 80%;*/
   margin:0 auto;
   text-align: center;
   margin-bottom: 60px;
@@ -165,13 +167,16 @@ strong {
   justify-content: space-between;
   bottom: 0;
   right: 0;
+  z-index: 999;
 }
 
 /*header
 -----------------------------------*/
-.header__inner {
-  background-color: #ec5151;
-padding-bottom: 30px;
+.header .header__inner {
+/*position: fixed;*/
+  z-index: 999;
+/*  background-color: #ec5151;*/
+padding-bottom: 20px;
 }
 
 /*g-nav-----------------------------------*/
@@ -223,7 +228,7 @@ position: relative;
 /*main
 -----------------------------------*/
 main {
-  background-color: #ec9b51;
+/*  background-color: #ec9b51;*/
 }
 /*news
 -----------------------------------*/
@@ -245,12 +250,14 @@ main {
 #message{
   text-align: center;
 }
+#message .message__inner{
+padding: 80px 20px 50px; }
 
 /*reason
 -----------------------------------*/
 
 #reason .reason__inner{
-padding:100px 20px 90px;
+padding:50px 20px 90px;
 }
 .re__cont img{
 margin-bottom: 50px;}
@@ -312,14 +319,14 @@ margin-bottom: 20px;
 /*products
 -----------------------------------*/
 #products{
-  height: 50vh;
+  height: 85vh;
   position: relative;
   background:url(../img/03_001.jpg) no-repeat center /cover;
 }
 .product__box {
   position: absolute;
-  top: 50%;
-  left: 25%;
+  top: 25vh;
+  left: 0;
     bottom: 0px;
       right: 0px;
   margin: 0 auto;
@@ -327,9 +334,11 @@ margin-bottom: 20px;
 /*lfcclub
 -----------------------------------*/
 #lfcclub .lfcclub__inner{
-  padding:150px 0 40px;
+  padding:150px 20px 20px;
 }
-#lfcclub a{
+#lfcclub p a{
+  text-align: center;
+  display: block;
   color: #1D4A35;
   margin-bottom: 50px;
 }
@@ -347,7 +356,7 @@ margin-bottom: 20px;
 -----------------------------------*/
 #reco .reco__inner{
   margin: 0 auto;
-padding: 150px 0 70px;
+padding: 20px 20px 70px;
 }
 
 .reco__conts{
