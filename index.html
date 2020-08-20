@@ -23,7 +23,8 @@
           <!--buy-cart-->
         </div>
         <!--top__box-->
-        <div class="header__box"><h1>LFCコンポスト</h1>
+        <div class="header__box">
+          <h1>LFCコンポスト</h1>
           <div class="h-logo"><img src="img/cope_logo_202001_fix.png" alt=""></div>
           <!--h-logo-->
           <div class="menu">
@@ -53,7 +54,7 @@
       <div id="fv">
         <div class="fv__inner">
 
-           <div class="fv__box"><strong>生ゴミから美味しい野菜を<br>コンポストをはじめよう</strong>
+          <div class="fv__box"><strong>生ゴミから美味しい野菜を<br>コンポストをはじめよう</strong>
             <p class="fv__txt">微生物の力で生ゴミをなくすコンポスト！<br>栄養ある堆肥から家庭菜園で野菜を育てよう<p>
                 <!--fv__txt-->
                 <div class="more products"><a href="#">LFCコンポストはこちら</a></div>
@@ -224,7 +225,7 @@
         <!--ambassador__inner-->
       </div>
       <!--ambassador-->
-      <div id="products">
+      <div id="products" class="bg">
         <div class="product__box"><strong>生ごみを捨てない暮らし<br>コンポストで美味しい野菜をつくりませんか？</strong>
           <div class="more"><a href="#">商品について</a></div>
         </div>
@@ -320,7 +321,7 @@
         <!--reco__inner-->
       </div>
       <!--reco-->
-      <div id="support">
+      <div id="support" class="bg">
 
         <div class="support__inner">
 
@@ -339,7 +340,7 @@
         </div>
         <!--support__inner-->
 
-        <div class="top"><a href="#">^</a></div>
+        <div id="top"><a href="#">^</a></div>
         <!--top-->
       </div>
       <!--support-->
@@ -354,7 +355,7 @@
               <a href="#">
                 <img src="img/f-cap03.jpg" alt="">
                 <p class="blog-title">プレスリリース</p>
-                    <!--blog-title-->
+                <!--blog-title-->
                 <p class="date">2020.05.01</p>
               </a>
             </div>
@@ -363,7 +364,7 @@
               <a href="#">
                 <img src="img/f-cap03.jpg" alt="">
                 <p class="blog-title">プレスリリース</p>
-                    <!--blog-title-->
+                <!--blog-title-->
                 <p class="date">2020.05.01</p>
               </a>
             </div>
@@ -372,7 +373,7 @@
               <a href="#">
                 <img src="img/f-cap03.jpg" alt="">
                 <p class="blog-title">プレスリリース</p>
-                    <!--blog-title-->
+                <!--blog-title-->
                 <p class="date">2020.05.01</p>
               </a>
             </div>
@@ -381,7 +382,7 @@
               <a href="#">
                 <img src="img/f-cap03.jpg" alt="">
                 <p class="blog-title">プレスリリース</p>
-                    <!--blog-title-->
+                <!--blog-title-->
                 <p class="date">2020.05.01</p>
               </a>
             </div>
@@ -416,33 +417,32 @@
   <script src="js/swiper.js"></script>
   <script>
     let slider0 = new Swiper('.slider0', {
-    direction: 'vertical',
-    effect: 'slide',
-    slidesPerView: 1,
-    loop: true,
-    autoplay: {
+      direction: 'vertical',
+//      slidesPerView: 1,
+      loop: true,
+      autoplay: {
         delay: 2000,
-    },autoplay:false,
+      },
+      spaceBetween: 0,
+//      autoplay: false,
     });
     let slider1 = new Swiper('.slider1', {
       autoplay: true,
-      effect: 'slide',
       pagination: {
         el: '.swiper-pagination',
+        clickable: true,
       },
       loop: true,
-      autoplay: true,
+//      autoplay: false,
     });
 
     let slider2 = new Swiper('.slider2', {
+      autoplay: true,
       speed: 1000,
       autoplay: {
         delay: 5000,
       },
-      mode: 'horizontal',
       loop: true,
-      effect: 'slide',
-      initialSlide: 1,
       spaceBetween: 0,
       pagination: {
         el: '.swiper-pagination',
@@ -458,8 +458,18 @@
           spaceBetween: 0
         }
       },
-      autoplay: false,
+//      autoplay: false,
     });
+
+      //    top
+      $(function () {
+        $('#top').on('click', function () {
+         $('html,body').animate({
+          scrollTop: 0
+         }, 500);
+          return false;
+        });
+      });
   </script>
 
 </body>

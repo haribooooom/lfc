@@ -37,6 +37,24 @@ div[class$="__inner"] {
   margin-bottom: 40px;
 }
 
+/*shadow back*/
+.bg{
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.bg::before{
+  background-color: rgba(0,0,0,0.4);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: ' ';
+}
+
 /*font*/
 h1,
 h2,
@@ -62,9 +80,8 @@ h3 {
   font-weight: 400;
   margin-bottom: 20px;
 }
-
 a:any-link{
-  color: red;
+  color: #fff;
 }
 a:hover {
   opacity: 0.5;
@@ -91,8 +108,6 @@ strong {
   }
 }
 
-/*elem
----------------*/
 
 /*slider*/
 
@@ -110,6 +125,8 @@ strong {
   background: var(--swiper-pagination-color, var(--swiper-theme-color));
 }
 
+/*elem
+---------------*/
 /*more*/
 .more a {
   width: 50%;
@@ -138,8 +155,9 @@ strong {
   padding-left: 0.5rem;
 }
 
-.more-nodec {
+#hotline a{
   text-align: end;
+  color: var(--theme-color);
 }
 
 #fv .more a,#products .more a{
@@ -158,11 +176,6 @@ strong {
   width: 30%;
 }
 
-}
-
-
-#hotline a {
-  color: var(--theme-color);
 }
 
 
@@ -340,16 +353,17 @@ nav {
 }
 
 #fv {
-  height: 90vh;
   background: url(../img/top_002_1.jpg) no-repeat center/cover;
+}
+#fv .fv__inner{
+  height: 80vh;
   position: relative;
 }
-
 .fv__box {
   position: absolute;
   top: 25%;
   left: 0px;
-  /* bottom: 0px;*/
+   bottom: 0px;
   right: 0px;
   margin: 0 auto;
   text-align: center;
@@ -361,19 +375,14 @@ background-color:var(--theme-sub-color);
 }
 
 @media screen and (min-width: 768px) {
-  #fv .fv__inner{
-/*    max-width: 1130px;*/
-  }
 
   .fv__box {
-    top: 30%;
-    left: 8vh;
-    bottom: 0px;
-    right: 0;
-    margin: 0;
+    top: 25vh;
     text-align: left;
-    color: #fff;
   }
+#fv .more a {
+  margin: 0;
+}
 }
 
 /*main-----------------------------------*/
@@ -393,7 +402,6 @@ main {
 }
 
   #news .more-nodec a {
-    background-color:aqua;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -552,13 +560,11 @@ main {
 /*products
 -----------------------------------*/
 #products {
-  height: 80vh;
-  position: relative;
-  background-color: rgba(34, 34, 34, 0.5);
-  background: url(../img/03_001.jpg) no-repeat center /cover;
+  height: 70vh;
+  background-image: url(../img/03_001.jpg);
 }
 
-.product__box {
+.product__box{
   position: absolute;
   top: 25vh;
   left: 0;
@@ -569,7 +575,6 @@ main {
 }
 
 @media screen and (min-width: 768px) {
-  #products {}
 
   #products .more a {
     margin: 0 auto;
@@ -662,14 +667,19 @@ main {
 /*support
 -----------------------------------*/
 #support {
-  background: url(../img/top_004-1.jpg) no-repeat center/cover;
-  position: relative;
+  background-image: url(../img/top_004-1.jpg);
 }
 
-.support__inner {
-  padding: 40px 0 20px;
+#support .support__inner {
+  padding: 40px 20px 20px;
   color: #fff;
+  z-index: 9;
 }
+
+.support__box,#support img{
+  z-index: 9;
+}
+
 
 #support img {
   display: block;
@@ -690,13 +700,11 @@ main {
   }
 
   #support img {
-    /*  display: block;*/
     margin: 0;
     width: 30%;
   }
 
   .support__box {
-    /*    margin-left: 0px;*/
     width: calc(100% - 30% - 8%);
   }
 
@@ -704,7 +712,7 @@ main {
 
 /*top
 -----------------------------------*/
-.top a {
+#top a {
   bottom: 0;
   position: absolute;
   text-align: center;
@@ -716,7 +724,7 @@ main {
   color: #fff;
 }
 
-.top a:hover {
+#top a:hover {
   background-color: rgba(34, 34, 34, 0.5);
 }
 
@@ -749,7 +757,9 @@ main {
 .blog__cont p {
   margin-bottom: 13px;
 }
-
+.blog__cont a{
+  color:#222;
+}
 @media screen and (min-width: 768px) {
 
   .blog__conts {
