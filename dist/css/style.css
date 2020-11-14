@@ -18,7 +18,6 @@ body {
 -----------------------------------*/
 div[class$="__inner"] {
   padding: 0 20px;
-/*  background-color: rgba(240, 248, 255, 0.7);*/
 }
 
 @media screen and (min-width: 768px) {
@@ -27,8 +26,6 @@ div[class$="__inner"] {
     max-width: 1130px;
     margin: 0 auto;
     padding: 0;
-/*    background-color: rgba(240, 248, 255, 0.7);*/
-/*    z-index: -999;*/
   }
 }
 
@@ -117,7 +114,6 @@ strong {
   display: inline-block;
   border-radius: 100%;
   background: #000;
-  /*  opacity: 0.2;*/
 }
 
 .swiper-pagination-bullet-active {
@@ -347,7 +343,6 @@ nav {
 }
 
 .g-nav li a:hover {
-  background-color: #5decbc;
   color: #333;
   transition: 0.4s;
 }
@@ -392,22 +387,28 @@ main {
 
 /*news-----------------------------------*/
 #news {
-  padding: 20px 0;
+  padding: 10px 0;
   background-color: #241004;
 }
 
 #news .swiper-container {
   position: relative;
-  height: 5vh;
+  height: 20px;
 }
 
   #news .more-nodec a {
     position: absolute;
-    bottom: 0;
+    bottom: -8px;
     right: 0;
     z-index: 9999;
+  line-height: 2;
   }
 
+.date {
+  display: none;
+}
+.article-info{
+}
 @media screen and (min-width: 768px) {
   #news .swiper-container {
   height: 16px;
@@ -417,6 +418,9 @@ main {
     float: left;
     padding-right: 1rem;
     margin-bottom: 0;
+  }
+  .date{
+    display: block;
   }
 
 }
