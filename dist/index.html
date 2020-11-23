@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>compost</title>
-  <!--  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500|Sawarabi+Gothic&display=swap" rel="stylesheet">-->
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/swiper.css">
   <link rel="stylesheet" href="css/style.css">
@@ -55,9 +54,10 @@
         <div class="fv__inner">
 
           <div class="fv__box"><strong>生ゴミから美味しい野菜を<br>コンポストをはじめよう</strong>
-            <p class="fv__txt">微生物の力で生ゴミをなくすコンポスト！<br>栄養ある堆肥から家庭菜園で野菜を育てよう<p>
-                <!--fv__txt-->
-                <div class="more products"><a href="#">LFCコンポストはこちら</a></div>
+            <p class="fv__txt">微生物の力で生ゴミをなくすコンポスト！<br>栄養ある堆肥から家庭菜園で野菜を育てよう
+            <p>
+              <!--fv__txt-->
+            <div class="more products"><a href="#">LFCコンポストはこちら</a></div>
           </div>
           <!--fv__box-->
 
@@ -90,7 +90,7 @@
             </div>
             <!--swiper-wrapper-->
 
-            <div class="more-nodec"><a href="#">ニュース一覧</a></div>
+            <div class="more-nodec sp-none"><a href="#">ニュース一覧</a></div>
           </div>
           <!--swiper-container slider0-->
         </div>
@@ -100,9 +100,10 @@
       <div id="message">
         <div class="message__inner">
           <div class="mes__box"><strong>土から野菜をつくり、また土へ<br>コンポストは暮らしの食循環です</strong>
-            <p class="message__txt">暮らすことは消費すること。私たちはいつも何かを消費しながら生きています。でも、私たち自身が少しでも生産に参加することができたら。生ごみが少し減り、地球の負担が少し減っていく。私たちは生ごみからの食循環を大切に活動を行っています。<p>
-                <!--message__txt-->
-                <div class="more our-mes"><a href="#">私たちの想い</a></div>
+            <p class="message__txt">暮らすことは消費すること。私たちはいつも何かを消費しながら生きています。でも、私たち自身が少しでも生産に参加することができたら。生ごみが少し減り、地球の負担が少し減っていく。私たちは生ごみからの食循環を大切に活動を行っています。
+            <p>
+              <!--message__txt-->
+            <div class="more our-mes"><a href="#">私たちの想い</a></div>
           </div>
           <!--mes__box--><img src="img/sycle-1.png" alt="">
         </div>
@@ -276,29 +277,33 @@
             <div class="reco__cont"><img src="img/osusume01-4.png" alt="">
               <h3>家庭の生ごみを捨てたくない</h3>
               <!--bold-->
-              <p class="reco__txt">毎日の生ごみをコンポストに入れるだけで環境負荷を減らすエコ活動になります。<p>
-                  <!--reco__txt-->
+              <p class="reco__txt">毎日の生ごみをコンポストに入れるだけで環境負荷を減らすエコ活動になります。
+              <p>
+                <!--reco__txt-->
             </div>
             <!--reco__cont-->
             <div class="reco__cont"><img src="img/osusume02-1.png" alt="">
               <h3>生ごみの臭いに困っている</h3>
               <!--bold-->
-              <p class="reco__txt">基材と一緒に生ごみを混ぜて、密封する。家から生臭い臭いが消えていきます<p>
-                  <!--reco__txt-->
+              <p class="reco__txt">基材と一緒に生ごみを混ぜて、密封する。家から生臭い臭いが消えていきます
+              <p>
+                <!--reco__txt-->
             </div>
             <!--reco__cont-->
             <div class="reco__cont"><img src="img/osusume03.png" alt="">
               <h3>レジ袋をもらいたくない</h3>
               <!--bold-->
-              <p class="reco__txt">ごみを捨てるためについもらうレジ袋。コンポストは不要なビニール袋を無くします<p>
-                  <!--reco__txt-->
+              <p class="reco__txt">ごみを捨てるためについもらうレジ袋。コンポストは不要なビニール袋を無くします
+              <p>
+                <!--reco__txt-->
             </div>
             <!--reco__cont-->
             <div class="reco__cont"><img src="img/osusume04-1.png" alt="">
               <h3>家庭菜園に自家製の土をつくりたい</h3>
               <!--bold-->
-              <p class="reco__txt">ガーデニングや家庭菜園に必要な土。自家製で栄養たっぷりの土づくりができます<p>
-                  <!--reco__txt-->
+              <p class="reco__txt">ガーデニングや家庭菜園に必要な土。自家製で栄養たっぷりの土づくりができます
+              <p>
+                <!--reco__txt-->
             </div>
             <!--reco__cont-->
             <div class="reco__cont"><img src="img/osusume05-1.png" alt="">
@@ -418,22 +423,26 @@
   <script>
     let slider0 = new Swiper('.slider0', {
       direction: 'vertical',
-//      slidesPerView: 1,
       loop: true,
+      speed: 1000,
       autoplay: {
         delay: 2000,
       },
       spaceBetween: 0,
-//      autoplay: false,
+      //      autoplay: false,
     });
     let slider1 = new Swiper('.slider1', {
+      speed: 1000,
+      autoplay: {
+        delay: 10000,
+      },
       autoplay: true,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
       },
       loop: true,
-//      autoplay: false,
+      //      autoplay: false,
     });
 
     let slider2 = new Swiper('.slider2', {
@@ -458,20 +467,18 @@
           spaceBetween: 0
         }
       },
-//      autoplay: false,
+      //      autoplay: false,
     });
 
-      //    top
-      $(function () {
-        $('#top').on('click', function () {
-         $('html,body').animate({
+    //    top
+    $(function() {
+      $('#top').on('click', function() {
+        $('html,body').animate({
           scrollTop: 0
-         }, 500);
-          return false;
-        });
+        }, 500);
+        return false;
       });
+    });
   </script>
 
-</body>
-
-</html>
+</body></html>

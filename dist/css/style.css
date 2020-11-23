@@ -17,7 +17,7 @@ body {
 /*layout 共通
 -----------------------------------*/
 div[class$="__inner"] {
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -97,6 +97,17 @@ strong {
   font-weight: 400;
 }
 
+.sp-none{
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .sp-none{
+  display: block;
+}
+
+}
+
 @media screen and (min-width: 768px) {
   #fv strong,#support strong,
   #message strong,
@@ -125,7 +136,7 @@ strong {
 ---------------*/
 /*more*/
 .more a {
-  width: 50%;
+  width: 40%;
   margin: 0 auto;
   margin-bottom: 50px;
   padding: 3% 4% ;
@@ -139,10 +150,10 @@ strong {
 
 /*center more*/
 
-#fv .more a,#products .more a{
-  font-size: 1.2rem;
-  padding: 3%;
-  width: 50%;
+#fv .more a{
+    font-size: 1rem;
+    padding: 10px;
+    width: 250px;
 }
 
 .more a::after,
@@ -294,6 +305,7 @@ strong {
   }
 }
 
+
 /*g-nav-----------------------------------*/
 /*menu*/
 .menu__box {
@@ -318,33 +330,6 @@ strong {
 
 nav {
   display: none;
-}
-
-.g-nav {
-  background-color: #c4ec51;
-  display: flex;
-  justify-content: space-between;
-}
-
-.g-nav li {
-  width: calc((100% / 3) - 10px);
-}
-
-.g-nav li a {
-  display: block;
-  /* line-height: 20px;*/
-  border-left: 1px solid #333;
-  box-sizing: border-box;
-  cursor: pointer;
-}
-
-.g-nav li:last-child a {
-  border-left: 1px solid #333;
-}
-
-.g-nav li a:hover {
-  color: #333;
-  transition: 0.4s;
 }
 
 #fv {
@@ -633,6 +618,7 @@ main {
 #reco .reco__inner {
   margin: 0 auto;
   padding: 20px 20px 70px;
+  max-width: 370px;
 }
 
 .reco__conts h3 {
@@ -675,8 +661,9 @@ main {
 }
 
 #support .support__inner {
-  padding: 40px 20px 20px;
+  padding: 40px 20px 60px;
   color: #fff;
+  position: relative;
   z-index: 9;
 }
 
@@ -784,7 +771,7 @@ footer {
   text-align: center;
   /*  background-color: #51bdec;*/
   border-top: 1px solid #444;
-  margin: 0 20px;
+/*  margin: 0 20px;*/
 }
 
 footer img {
@@ -794,12 +781,13 @@ footer img {
 
 .f-nav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 .f-nav li a {
   font-size: 7px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   display: block;
   padding: 0 10px;
   color: #222;
