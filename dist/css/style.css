@@ -143,6 +143,7 @@ strong {
   display: block;
   text-align: center;
   font-size: 0.8rem;
+  line-height: 1.6rem;
   border-radius: 4px;
   color: #fff;
   background-color: var(--theme-color);
@@ -286,16 +287,16 @@ strong {
 .header__box {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 10px;
+  padding-bottom: 0;
 }
 
 .h-logo {
   width: 70%;
 }
 
-.header .header__inner {
+.header {
   border-top: 2px solid var(--theme-color);
-;
   z-index: 999;
 }
 
@@ -336,7 +337,7 @@ nav {
   background: url(../img/top_002_1.jpg) no-repeat center/cover;
 }
 #fv .fv__inner{
-  height: 80vh;
+  height: 60vh;
   position: relative;
 }
 .fv__box {
@@ -366,9 +367,6 @@ background-color:var(--theme-sub-color);
 }
 
 /*main-----------------------------------*/
-main {
-  /*  background-color: #ec9b51;*/
-}
 
 /*news-----------------------------------*/
 #news {
@@ -618,7 +616,6 @@ main {
 #reco .reco__inner {
   margin: 0 auto;
   padding: 20px 20px 70px;
-  max-width: 370px;
 }
 
 .reco__conts h3 {
